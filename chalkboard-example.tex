@@ -1,0 +1,65 @@
+% Copyright 2026 Sewoong Lee
+% 
+% This work may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License, either version 1.3c of this license or (at your
+% option) any later version. The latest version of this license is at:
+% https://www.latex-project.org/lppl.txt
+% 
+% This work has the LPPL maintenance status `maintained'.
+% The Current Maintainer is Sewoong Lee <samuel27@illinois.edu>.
+% 
+% The work consists of README.md, LICENSE, beamercolorthemechalkboard.sty,
+% beamercolorthemechalkboard-doc.tex, and chalkboard-example.tex.
+% The derived files are beamercolorthemechalkboard-doc.pdf and chalkboard-example.pdf.
+
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{chalkboard}
+\title[Chalkboard]{Chalkboard}
+\subtitle{A dark green color theme for Beamer}
+\author{Sewoong Lee}
+\date{Version 0.1.0 -- October 15, 2026}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\section{Examples}
+\begin{frame}{Text, lists, and mathematics}
+Warm off-white text on a dark green board.
+\begin{itemize}
+\item Structure uses chalk yellow.
+\item \alert{Alerts use chalk pink.}
+\item {\usebeamercolor[fg]{example text}Examples use chalk blue.}
+\end{itemize}
+\begin{enumerate}
+\item Start with a clear statement.
+\item Support it with a simple equation:
+\end{enumerate}
+\[ e^{i\pi}+1=0 \qquad \sum_{k=1}^{n}k=\frac{n(n+1)}{2}. \]
+\end{frame}
+\begin{frame}{Three kinds of blocks}
+\begin{block}{A standard block}
+Use this for definitions and central ideas.
+\end{block}
+\begin{alertblock}{An alert block}
+Use an alert when a detail deserves special attention.
+\end{alertblock}
+\begin{exampleblock}{An example block}
+For example, $a^2+b^2=c^2$ for a right triangle.
+\end{exampleblock}
+\end{frame}
+\begin{frame}{The chalk palette}
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lll}
+\textbf{Color} & \textbf{HTML} & \textbf{Sample}\\
+chalkwhite & E6E4D8 & \textcolor{chalkwhite}{Chalk text}\\
+chalkyellow & EBD58A & \textcolor{chalkyellow}{Structure}\\
+chalkblue & 9FC5E0 & \textcolor{chalkblue}{Examples}\\
+chalkpink & F0A6A0 & \textcolor{chalkpink}{Alerts}\\
+chalkboard & 2A3B33 & Background\\
+chalkboarddark & 1F2B25 & Titles and palettes\\
+chalkboardlight & 34483E & Block bodies
+\end{tabular}
+\end{frame}
+\end{document}

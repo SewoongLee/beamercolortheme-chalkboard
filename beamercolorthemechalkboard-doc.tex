@@ -1,0 +1,105 @@
+% Copyright 2026 Sewoong Lee
+% 
+% This work may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License, either version 1.3c of this license or (at your
+% option) any later version. The latest version of this license is at:
+% https://www.latex-project.org/lppl.txt
+% 
+% This work has the LPPL maintenance status `maintained'.
+% The Current Maintainer is Sewoong Lee <samuel27@illinois.edu>.
+% 
+% The work consists of README.md, LICENSE, beamercolorthemechalkboard.sty,
+% beamercolorthemechalkboard-doc.tex, and chalkboard-example.tex.
+% The derived files are beamercolorthemechalkboard-doc.pdf and chalkboard-example.pdf.
+
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=27mm]{geometry}
+\usepackage{xcolor,booktabs}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\title{The \texttt{chalkboard} Beamer color theme}
+\author{Sewoong Lee\\\small\href{mailto:samuel27@illinois.edu}{samuel27@illinois.edu}}
+\date{Version 0.1.0\quad 2026-10-15}
+\begin{document}
+\maketitle
+\section{Overview}
+Chalkboard is a Beamer color theme with a dark green background, warm
+ off-white text, and yellow, blue, and pink accents. It is distributed as
+\texttt{beamercolorthemechalkboard.sty}; the user-facing theme name is
+\texttt{chalkboard}. It requires Beamer and no extra fonts or image assets.
+\section{Installation and use}
+For a single presentation, copy the style file into the directory containing
+your main source. On Overleaf, upload it beside the main source. For a local
+installation shared between projects, use the directory
+\texttt{tex/latex/beamercolorthemechalkboard/} under your personal TeX tree;
+find that tree with \texttt{kpsewhich -var-value=TEXMFHOME}.
+
+Load the main theme first and the color theme afterwards:
+\begin{verbatim}
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{chalkboard}
+\begin{document}
+\begin{frame}{Hello}
+  Normal text and \alert{an important detail}.
+\end{frame}
+\end{document}
+\end{verbatim}
+No package options are defined. See \texttt{chalkboard-example.tex} and its
+PDF for a title page, lists, mathematics, three block types, and the palette.
+Compile either documentation or example source twice with pdfLaTeX from
+the package directory.
+\newpage
+\section{Palette and behavior}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Color name & HTML value & Main use\\
+\midrule
+\texttt{chalkboard} & \texttt{2A3B33} & Background\\
+\texttt{chalkboarddark} & \texttt{1F2B25} & Titles and palettes\\
+\texttt{chalkboardlight} & \texttt{34483E} & Block bodies\\
+\texttt{chalkwhite} & \texttt{E6E4D8} & Normal text\\
+\texttt{chalkyellow} & \texttt{EBD58A} & Structure and standard titles\\
+\texttt{chalkblue} & \texttt{9FC5E0} & Example text and titles\\
+\texttt{chalkpink} & \texttt{F0A6A0} & Alerts and alert titles\\
+\bottomrule
+\end{tabular}
+\end{center}
+The theme sets normal text and background colors, the four palettes,
+title and frame-title colors, author/date colors in headers and footers,
+and standard, alert, and example block colors. Projected item labels use
+dark green on yellow and a bold font.
+
+In addition to colors, the theme selects rounded blocks without shadows
+and the default rounded title page without shadows. It does not select
+ball-shaped list markers: these depend on the main or inner theme. To
+change these choices, apply your template or font settings after loading
+Chalkboard. For example:
+\begin{verbatim}
+\setbeamertemplate{blocks}[default]
+\setbeamerfont{item projected}{series=\mdseries}
+\end{verbatim}
+\section{Compatibility and customization}
+Madrid is the reference combination. The default Beamer theme is also
+supported; other themes can supply templates or later settings that affect
+the result. The named colors above are available for use in your content.
+Use Beamer's \verb|\setbeamercolor| after loading the theme to customize
+individual elements.
+
+Handout mode retains the dark background. There is no light/print mode.
+Check the result on your presentation equipment: projector brightness and
+room lighting can affect readability.
+\section{License, maintenance, and history}
+Copyright 2026 Sewoong Lee. This work is distributed under the LaTeX Project
+Public License version 1.3c or, at your option, any later version.
+See \url{https://www.latex-project.org/lppl.txt} and the accompanying
+\texttt{LICENSE} for the file list. Maintenance status: maintained.
+Current Maintainer: Sewoong Lee, \href{mailto:samuel27@illinois.edu}{samuel27@illinois.edu}.
+
+Version 0.1.0 (2026-10-15): Initial packaged release.
+
+Author profile: \url{https://github.com/SewoongLee}.
+\end{document}

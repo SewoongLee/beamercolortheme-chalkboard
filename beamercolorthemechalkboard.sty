@@ -1,0 +1,67 @@
+% Copyright 2026 Sewoong Lee
+% 
+% This work may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License, either version 1.3c of this license or (at your
+% option) any later version. The latest version of this license is at:
+% https://www.latex-project.org/lppl.txt
+% 
+% This work has the LPPL maintenance status `maintained'.
+% The Current Maintainer is Sewoong Lee <samuel27@illinois.edu>.
+% 
+% The work consists of README.md, LICENSE, beamercolorthemechalkboard.sty,
+% beamercolorthemechalkboard-doc.tex, and chalkboard-example.tex.
+% The derived files are beamercolorthemechalkboard-doc.pdf and chalkboard-example.pdf.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamercolorthemechalkboard}[2026/10/15 v0.1.0 Chalkboard color theme for Beamer]
+
+% Chalkboard color theme for beamer: dark green board, chalk-colored text.
+% Usage: \usetheme{Madrid} \usecolortheme{chalkboard}
+
+\mode<presentation>
+
+\definecolor{chalkboard}{HTML}{2A3B33}
+\definecolor{chalkboarddark}{HTML}{1F2B25}
+\definecolor{chalkboardlight}{HTML}{34483E}
+\definecolor{chalkwhite}{HTML}{E6E4D8}
+\definecolor{chalkyellow}{HTML}{EBD58A}
+\definecolor{chalkblue}{HTML}{9FC5E0}
+\definecolor{chalkpink}{HTML}{F0A6A0}
+
+\setbeamercolor{normal text}{fg=chalkwhite,bg=chalkboard}
+\setbeamercolor{background canvas}{bg=chalkboard}
+\setbeamercolor{structure}{fg=chalkyellow}
+\setbeamercolor{alerted text}{fg=chalkpink}
+\setbeamercolor{example text}{fg=chalkblue}
+
+\setbeamercolor{palette primary}{fg=chalkwhite,bg=chalkboarddark}
+\setbeamercolor{palette secondary}{fg=chalkwhite,bg=chalkboarddark}
+\setbeamercolor{palette tertiary}{fg=chalkwhite,bg=chalkboarddark}
+\setbeamercolor{palette quaternary}{fg=chalkwhite,bg=chalkboarddark}
+
+\setbeamercolor{titlelike}{fg=chalkyellow,bg=chalkboarddark}
+\setbeamercolor{frametitle}{fg=chalkyellow,bg=chalkboarddark}
+\setbeamercolor{title}{fg=chalkyellow,bg=chalkboarddark}
+\setbeamercolor{subtitle}{fg=chalkwhite}
+
+\setbeamercolor{author in head/foot}{fg=chalkwhite!75!chalkboard,bg=chalkboarddark}
+\setbeamercolor{date in head/foot}{fg=chalkwhite!75!chalkboard,bg=chalkboarddark}
+
+\setbeamercolor{block title}{fg=chalkyellow,bg=chalkboarddark}
+\setbeamercolor{block body}{fg=chalkwhite,bg=chalkboardlight}
+\setbeamercolor{block title alerted}{fg=chalkpink,bg=chalkboarddark}
+\setbeamercolor{block body alerted}{fg=chalkwhite,bg=chalkboardlight}
+\setbeamercolor{block title example}{fg=chalkblue,bg=chalkboarddark}
+\setbeamercolor{block body example}{fg=chalkwhite,bg=chalkboardlight}
+
+% Chalk-yellow 3D balls for both itemize and enumerate. Numbers are dark
+% green because a light number is washed out by the ball's white highlight.
+\setbeamercolor{item projected}{fg=chalkboarddark,bg=chalkyellow}
+\setbeamerfont{item projected}{series=\bfseries}
+
+% Drop shadows look like smudges on a dark board.
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,shadow=false]
+
+\mode<all>
+\endinput
