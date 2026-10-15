@@ -49,6 +49,9 @@ Test readability on the projector and in the lighting used for your talk.
 Sewoong Lee <samuel27@illinois.edu>  
 Author profile: https://github.com/SewoongLee
 
+Repository: https://github.com/SewoongLee/beamercolortheme-chalkboard  
+Bug reports: https://github.com/SewoongLee/beamercolortheme-chalkboard/issues
+
 ## License
 
 Copyright 2026 Sewoong Lee. Distributed under the LaTeX Project Public
