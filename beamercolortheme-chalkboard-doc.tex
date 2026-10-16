@@ -9,8 +9,8 @@
 % The Current Maintainer is Sewoong Lee <samuel27@illinois.edu>.
 % 
 % The work consists of README.md, LICENSE, beamercolorthemechalkboard.sty,
-% beamercolorthemechalkboard-doc.tex, and chalkboard-example.tex.
-% The derived files are beamercolorthemechalkboard-doc.pdf and chalkboard-example.pdf.
+% beamercolortheme-chalkboard-doc.tex, and chalkboard-example.tex.
+% The derived files are beamercolortheme-chalkboard-doc.pdf and chalkboard-example.pdf.
 
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
@@ -28,12 +28,14 @@
 Chalkboard is a Beamer color theme with a dark green background, warm
  off-white text, and yellow, blue, and pink accents. It is distributed as
 \texttt{beamercolorthemechalkboard.sty}; the user-facing theme name is
-\texttt{chalkboard}. It requires Beamer and no extra fonts or image assets.
+\texttt{chalkboard}. The CTAN package name is
+\texttt{beamercolortheme-chalkboard}. It requires Beamer and no extra
+fonts or image assets.
 \section{Installation and use}
 For a single presentation, copy the style file into the directory containing
 your main source. On Overleaf, upload it beside the main source. For a local
 installation shared between projects, use the directory
-\texttt{tex/latex/beamercolorthemechalkboard/} under your personal TeX tree;
+\texttt{tex/latex/beamercolortheme-chalkboard/} under your personal TeX tree;
 find that tree with \texttt{kpsewhich -var-value=TEXMFHOME}.
 
 Load the main theme first and the color theme afterwards:
@@ -100,6 +102,10 @@ See \url{https://www.latex-project.org/lppl.txt} and the accompanying
 Current Maintainer: Sewoong Lee, \href{mailto:samuel27@illinois.edu}{samuel27@illinois.edu}.
 
 Version 0.1.0 (2026-10-15): Initial packaged release.
+
+Packaging revised 2026-10-16: CTAN package name, archive directory, and
+documentation renamed to \texttt{beamercolortheme-chalkboard}.
+The runtime style filename and user command are unchanged.
 
 Author profile: \url{https://github.com/SewoongLee}.
 \end{document}

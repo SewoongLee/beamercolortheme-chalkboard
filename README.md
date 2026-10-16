@@ -1,10 +1,14 @@
-# Chalkboard color theme for Beamer
+# beamercolortheme-chalkboard
 
-Version 0.1.0 (2026-10-15)
+Version 0.1.0 (2026-10-15; packaging revised 2026-10-16)
 
 A chalkboard-inspired dark green color theme for Beamer, with warm off-white
 text and yellow, blue, and pink accents. It styles titles, palettes, blocks,
 and projected items, and disables shadows on blocks and the title page.
+
+The CTAN package name is `beamercolortheme-chalkboard`. The runtime file
+is `beamercolorthemechalkboard.sty`, as required by Beamer's
+`\usecolortheme{chalkboard}` naming convention.
 
 ## Quick start
 
@@ -25,13 +29,13 @@ Load the color theme after the main theme. No theme options are provided.
 Beamer is required; no extra fonts or external graphics are needed. The
 package uses the color facilities supplied by Beamer. For a persistent local
 installation, place the style file in
-`TEXMFHOME/tex/latex/beamercolorthemechalkboard/` (find TEXMFHOME with
+`TEXMFHOME/tex/latex/beamercolortheme-chalkboard/` (find TEXMFHOME with
 `kpsewhich -var-value=TEXMFHOME`). Overleaf users can upload the style file
 beside their main `.tex` file.
 
 ## Documentation and example
 
-Read `beamercolorthemechalkboard-doc.pdf` and `chalkboard-example.pdf`.
+Read `beamercolortheme-chalkboard-doc.pdf` and `chalkboard-example.pdf`.
 Build each PDF by running pdfLaTeX twice on its corresponding `.tex` file
 from this directory. The example uses Madrid; the theme also works with
 the default Beamer theme. Other themes may override particular settings.
@@ -60,5 +64,9 @@ Maintenance status: maintained. Current Maintainer: Sewoong Lee.
 See `LICENSE` for the work's file list and license URL.
 
 ## Changes
+
+- 2026-10-16: Rename the CTAN package, archive directory, and documentation
+  to `beamercolortheme-chalkboard` at the CTAN team's request. The runtime
+  style filename, user command, and theme behavior are unchanged.
 
 - 0.1.0 (2026-10-15): Initial packaged release of the Chalkboard color theme.
